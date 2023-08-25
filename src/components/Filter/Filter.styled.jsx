@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 
-export const ContactsLabel = styled.label`
-  margin-bottom: 40px;
-  font-size: 500;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
+export const FilterTitle = styled.header`
+  width: fit-content;
+  font-size: 36px;
+  margin: 0 auto;
+  margin-bottom: 45px;
 `
 
-export const ContactsInput = styled.input`
-  margin-top: 5px;
-  width: 150px;
+export const FilterLabel = styled.label`
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
 `

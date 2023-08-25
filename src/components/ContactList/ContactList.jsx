@@ -1,15 +1,15 @@
+import PropTypes from 'prop-types';
 import { ContactItem } from 'components/ContactItem/ContactItem';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact, getContacts } from 'redux/operations';
+import { Audio } from 'react-loader-spinner';
 import {
   getContactsList,
   getFilter,
   getIsLoading,
   getError,
 } from 'redux/selectors';
-import PropTypes from 'prop-types';
+import { deleteContact, fetchContacts } from 'redux/contactOperations';
 import { ContactsList } from './ContactList.styled';
-import { Audio } from 'react-loader-spinner';
 
 function ContactList() {
   const contacts = useSelector(getContactsList);
@@ -26,7 +26,7 @@ function ContactList() {
 
   const deleteContacts = id => {
     dispatch(deleteContact(id));
-    dispatch(getContacts());
+    dispatch(fetchContacts());
   };
 
   return (
@@ -40,6 +40,7 @@ function ContactList() {
           ariaLabel="loading"
         />
       )}
+
       <ContactsList>
         {!isLoading &&
           filteredContacts().map(({ id, name, number }) => (

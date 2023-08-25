@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+export const PhonebookSection = styled.section`
+  padding: 200px 0px;
+`
+
+export const PhonebookTitle = styled.h2`
+  width: fit-content;
+  font-size: 36px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+`
+
 export const PhonebookForm = styled.form`
   background-color: white;
   border: 1px solid black;
@@ -14,23 +25,4 @@ export const PhonebookLabel = styled.label`
   font-size: 24px;
   display: flex;
   flex-direction: column;
-`
-
-export const PhonebookInput = styled.input`
-  margin-top: 5px;
-  width: 200px;
-`
-
-export const PhonebookBtn = styled.button`
-  background-color: white;
-  border: 0.5px solid grey;
-  border-radius: 5px;
-  font-weight: 500;
-  font-size: 14px;
-  padding: 5px 7px;
-  transition: color 250ms linear, background-color 250ms linear;
-  &:hover {
-    background-color: aqua;
-    color: black;
-  }
 `
